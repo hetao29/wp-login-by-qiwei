@@ -1,17 +1,17 @@
 # Login By Qiwei (企微微信/企微登录wordpress）
 
-Contributors: dojodigital, kraftbj \\
-Plugin Name: Login By Qiwei
-Plugin URI: https://github.com/hetao29/wp-login-by-qiwei
-Tags: qiwei, weichat, weixin
-Author URI: https://github.com/hetao29/
-Author: Hetao
-Requires at least: 5.0
-Tested up to: 6.5
-Stable tag: 1.0.0
-Version: 1.0.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Contributors: hetao \
+Plugin Name: Login By Qiwei \
+Plugin URI: https://github.com/hetao29/wp-login-by-qiwei \
+Tags: qiwei, weichat, weixin \
+Author URI: https://github.com/hetao29/ \
+Author: Hetao \
+Requires at least: 5.0 \
+Tested up to: 6.5 \
+Stable tag: 1.0.0 \
+Version: 1.0.0 \
+License: GPLv2 or later \
+License URI: https://www.gnu.org/licenses/gpl-2.0.html \
 
 Allows user login with qiwei (the weichat of enterprise)
 
