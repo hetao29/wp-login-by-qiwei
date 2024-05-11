@@ -1,6 +1,6 @@
 === Login By Qiwei ===
 
-Contributors: dojodigital, kraftbj
+Contributors: Hetao
 Plugin Name: Login By Qiwei
 Plugin URI: https://github.com/hetao29/wp-login-by-qiwei
 Tags: qiwei, weichat, weixin
@@ -18,6 +18,7 @@ Allows user login with qiwei (the weichat of enterprise)
 == Description ==
 
 Allows user login with qiwei (the weichat of enterprise)
+允许用户用企微（企业微信）扫码登录wordpress，支持自动注册和禁用普通账号/密码登录。
 
 1. Allow to login with qiwei
 2. Auto register user with qiwei username (options)
