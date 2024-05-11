@@ -1,0 +1,82 @@
+# Login By Qiwei
+# Copyright (C) 2024
+# This file is distributed under the same license as the PACKAGE package.
+# Hetao<hetao@hetao.name>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0.0 \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-16 10:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: hetao<hetao@hetao@name>\n"
+"Language-Team: hetao<hetao@hetao.name>\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description of the plugin
+msgid "Login in wordpress by qiwei wechat account"
+msgstr "用于企业微信账号登录"
+
+#: login-by-qiwei.php:48
+msgid "Settings"
+msgstr "设置"
+
+#: login-by-qiwei.php:64 login-by-qiwei.php:68
+msgid "Qiwei Login"
+msgstr "企微登录"
+
+#: login-by-qiwei.php:92
+msgid "Setting of Login By Qiwei"
+msgstr "设置企微登录参数"
+
+#: login-by-qiwei.php:93
+msgid "Login By Qiwei"
+msgstr "企业微信登录"
+
+#: login-by-qiwei.php:104
+msgid "Settings Saved"
+msgstr "保存成功"
+
+#: login-by-qiwei.php:133
+msgid ""
+"Please set each parameter here. For specific meanings, please refer to Qiwei"
+msgstr "请在这里设置各参数,具体含义请参考 企微"
+
+#: login-by-qiwei.php:135
+msgid "Login instructions"
+msgstr "登录说明"
+
+#: login-by-qiwei.php:143
+msgid "CorpId/AppId"
+msgstr "企业ID"
+
+#: login-by-qiwei.php:150
+msgid "AgentId"
+msgstr "自建应用ID"
+
+#: login-by-qiwei.php:157
+msgid "CorpSecrect"
+msgstr "密钥"
+
+#: login-by-qiwei.php:164
+msgid "Auto Register"
+msgstr "自动注册新用户"
+
+#: login-by-qiwei.php:171
+msgid "Default Role of New User"
+msgstr "新用户默认权限"
+
+#: login-by-qiwei.php:178
+msgid "Disable Default Login"
+msgstr "禁用系统默认登录"
+
+#: login-by-qiwei.php:192
+msgid ""
+"Warning, This will override the default login, You should diable/remove the "
+"plugin if you cannot login by Qiwei."
+msgstr ""
+"警告，勾选此选项，您将不能使用账号和密码登录，如果你不能用正常登录，您可以禁用或者删除些插件，可以登录后再重新设置"
