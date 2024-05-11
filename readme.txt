@@ -2,9 +2,9 @@
 
 Contributors: dojodigital, kraftbj
 Plugin Name: Login By Qiwei
-Plugin URI: https://blog.mxiqi.com/login-by-qiwei
+Plugin URI: https://github.com/hetao29/wp-login-by-qiwei
 Tags: qiwei, weichat, weixin
-Author URI: http://www.mxiqi.com/
+Author URI: https://github.com/hetao29/
 Author: Hetao
 Requires at least: 5.0
 Tested up to: 6.5

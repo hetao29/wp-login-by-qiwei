@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       Login By Qiwei
- * Plugin URI:        https://blog.mxiqi.com/login-by-qiwei
+ * Plugin URI:        https://github.com/hetao29/wp-login-by-qiwei
  * Description:       Login in wordpress by qiwei wechat account
  * Version:           1.0.0
  * Requires PHP:      7.0
  * Requires at least: 5.0
  * Tested up to:      6.5
- * Author URI:        https://www.mxiqi.com
+ * Author URI:        https://github.com/hetao29/
  * License:           GNU General Public License v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:	      login-by-qiwei
