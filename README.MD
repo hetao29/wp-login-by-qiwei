@@ -1,6 +1,6 @@
-# Login By Qiwei
+# Login By Qiwei (企微微信/企微登录wordpress）
 
-Contributors: dojodigital, kraftbj
+Contributors: dojodigital, kraftbj \\
 Plugin Name: Login By Qiwei
 Plugin URI: https://github.com/hetao29/wp-login-by-qiwei
 Tags: qiwei, weichat, weixin
