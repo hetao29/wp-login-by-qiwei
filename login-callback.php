@@ -40,7 +40,7 @@ if ( !class_exists( 'LoginByQiweiCallack' ) ) {
 if ( ! wp_verify_nonce( $_REQUEST['_wpnonce']??"", 'nonce' ) ) {
 	wp_redirect(wp_login_url("",true));
 }else{
-	$code = $_REQUEST['code']??"";
+	$code = sanitize_text_field($_REQUEST['code']??"");
 	$userinfo = LoginByQiweiCallack::getuserinfo($code);
 	$username = $userinfo->userid ?? "";
 	if(!empty($username)){
