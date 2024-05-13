@@ -37,39 +37,42 @@ if ( !class_exists( 'LoginByQiweiCallack' ) ) {
 	}
 }
 
-// phpcs:ignore
-$code = $_REQUEST['code']??"";
-$userinfo = LoginByQiweiCallack::getuserinfo($code);
-$username = $userinfo->userid ?? "";
-if(!empty($username)){
-	$user = get_user_by('login', $username );
-	if ( $user ){
-		wp_set_current_user ( $user->ID );
-		wp_set_auth_cookie  ( $user->ID);
-		wp_redirect(admin_url());
-	}else{
-		$qiwei_option= get_option('qiwei_option');
-		if(!empty($qiwei_option['auto_register']) && $qiwei_option['auto_register']=="on"){
-			$userdata = array(
-				'user_login' =>  $username,
-				'user_pass'  =>  NULL // When creating an user, `user_pass` is expected.
-			);
-			if(!empty($qiwei_option['auto_register_role'])){
-				$userdata['role'] = $qiwei_option['auto_register_role'];
-			}
-			//https://developer.wordpress.org/reference/functions/wp_insert_user/
-			$user_id = wp_insert_user( $userdata ) ;
-			if ( ! is_wp_error( $user_id ) ) {
-				wp_set_current_user ( $user->ID );
-				wp_set_auth_cookie  ( $user->ID);
-				wp_redirect(admin_url());
+if ( ! wp_verify_nonce( $_REQUEST['_wpnonce']??"", 'nonce' ) ) {
+	wp_redirect(wp_login_url("",true));
+}else{
+	$code = $_REQUEST['code']??"";
+	$userinfo = LoginByQiweiCallack::getuserinfo($code);
+	$username = $userinfo->userid ?? "";
+	if(!empty($username)){
+		$user = get_user_by('login', $username );
+		if ( $user ){
+			wp_set_current_user ( $user->ID );
+			wp_set_auth_cookie  ( $user->ID);
+			wp_redirect(admin_url());
+		}else{
+			$qiwei_option= get_option('qiwei_option');
+			if(!empty($qiwei_option['auto_register']) && $qiwei_option['auto_register']=="on"){
+				$userdata = array(
+					'user_login' =>  $username,
+					'user_pass'  =>  NULL // When creating an user, `user_pass` is expected.
+				);
+				if(!empty($qiwei_option['auto_register_role'])){
+					$userdata['role'] = $qiwei_option['auto_register_role'];
+				}
+				//https://developer.wordpress.org/reference/functions/wp_insert_user/
+				$user_id = wp_insert_user( $userdata ) ;
+				if ( ! is_wp_error( $user_id ) ) {
+					wp_set_current_user ( $user->ID );
+					wp_set_auth_cookie  ( $user->ID);
+					wp_redirect(admin_url());
+				}else{
+					wp_redirect(wp_login_url("",true));
+				}
 			}else{
 				wp_redirect(wp_login_url("",true));
 			}
-		}else{
-			wp_redirect(wp_login_url("",true));
 		}
+	}else{
+		wp_redirect(wp_login_url("",true));
 	}
-}else{
-	wp_redirect(wp_login_url("",true));
 }

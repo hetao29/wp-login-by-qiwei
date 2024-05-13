@@ -3,7 +3,7 @@
  * Plugin Name:       Login By Qiwei
  * Plugin URI:        https://github.com/hetao29/wp-login-by-qiwei
  * Description:       Login in wordpress by qiwei wechat account
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires PHP:      7.0
  * Requires at least: 5.0
  * Tested up to:      6.5
@@ -71,11 +71,11 @@ if ( !class_exists( 'LoginByQiwei' ) ) {
 			load_plugin_textdomain( 'login-by-qiwei', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		}
 		function login_init(){
-			// phpcs:ignore
-			if($this->isQiyeWeixin() && !isset($_REQUEST['loggedout'])){
+			if($this->isQiyeWeixin() && !isset($_GET['loggedout'])){ // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				wp_redirect($this->get_login_url());
 			}else{
-				$url = home_url()."/wp-content/plugins/login-by-qiwei/login-callback.php";
+				$nonce = wp_create_nonce( 'nonce' );
+				$url = home_url()."/wp-content/plugins/login-by-qiwei/login-callback.php?_wpnonce=$nonce";
 				set_query_var('url',$url);
 				set_query_var('qiwei_option',$this->qiwei_option);
 				login_header();
@@ -84,8 +84,7 @@ if ( !class_exists( 'LoginByQiwei' ) ) {
 				login_footer();
 				echo ("<script>qiWeiLogin();</script>");
 			}
-			// phpcs:ignore
-			if(!is_user_logged_in() || !isset( $_GET['action'])){ exit; }
+			if(!is_user_logged_in() || !isset( $_GET['action'])){ exit; }// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
 		function register_setting_menu(){
 			add_options_page(
@@ -99,10 +98,6 @@ if ( !class_exists( 'LoginByQiwei' ) ) {
 		function register_setting_page(){
 			if (!current_user_can('manage_options')) {
 				return;
-			}
-			// phpcs:ignore
-			if ( isset( $_GET['settings-updated'] ) ) {
-				add_settings_error( 'wporg_messages', 'wporg_message', __( 'Settings Saved', 'wporg' ), 'updated' );
 			}
 ?>
     <div class="wrap">
@@ -222,7 +217,9 @@ if ( !class_exists( 'LoginByQiwei' ) ) {
 			return false;
 		}
 		function get_login_url(){
-			$url = home_url()."/wp-content/plugins/login-by-qiwei/login-callback.php";
+			$nonce = wp_create_nonce( 'nonce' );
+			$url = home_url()."/wp-content/plugins/login-by-qiwei/login-callback.php?_wpnonce=$nonce";
+			set_query_var('url',$url);
 			return "https://open.weixin.qq.com/connect/oauth2/authorize?".http_build_query([
 				"appid"=>$this->qiwei_option['corpid'],
 				"redirect_uri"=>urlencode($url),
