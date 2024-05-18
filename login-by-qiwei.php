@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Login By Qiwei
- * Plugin URI:        https://github.com/hetao29/wp-login-by-qiwei
- * Description:       Login in wordpress by qiwei wechat account
- * Version:           1.0.1
+ * Plugin Name:       Login Integration For Enterprise Wechat
+ * Plugin URI:        https://github.com/hetao29/wp-login-integration-for-enterprise-wechat
+ * Description:       Login in wordpress by enterprise wechat account
+ * Version:           1.1.0
  * Requires PHP:      7.0
  * Requires at least: 5.0
  * Tested up to:      6.5
