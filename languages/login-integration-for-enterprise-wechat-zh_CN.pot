@@ -17,8 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Name of the plugin
+msgid "Login Integration For Enterprise Wechat"
+msgstr "企业微信账号登录"
+
 #. Description of the plugin
-msgid "Login in wordpress by qiwei wechat account"
+msgid "Login in wordpress by enterprise wechat account"
 msgstr "用于企业微信账号登录"
 
 #: login-by-qiwei.php:48
@@ -26,12 +30,12 @@ msgid "Settings"
 msgstr "设置"
 
 #: login-by-qiwei.php:64 login-by-qiwei.php:68
-msgid "Qiwei Login"
-msgstr "企微登录"
+msgid "Login with Enterprise Wechat"
+msgstr "企业微信登录"
 
 #: login-by-qiwei.php:92
 msgid "Setting of Login By Qiwei"
-msgstr "设置企微登录参数"
+msgstr "设置企业微信登录参数"
 
 #: login-by-qiwei.php:93
 msgid "Login By Qiwei"

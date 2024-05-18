@@ -8,7 +8,7 @@ if ( !class_exists( 'LoginByQiweiCallack' ) ) {
 		 */
 		public static $cache_key="LoginByQiweiCallack::gettoken";
 		public static function gettoken(){
-			$qiwei_option= get_option('qiwei_option');
+			$qiwei_option= get_option('wp_login_enterprise_wechat_option');
 			$corpid = $qiwei_option['corpid']??'';
 			$corpsecret = $qiwei_option['corpsecret']??'';
 			$key = self::$cache_key."::$corpid::$corpsecret";
@@ -50,7 +50,7 @@ if ( ! wp_verify_nonce( $_REQUEST['_wpnonce']??"", 'nonce' ) ) {
 			wp_set_auth_cookie  ( $user->ID);
 			wp_redirect(admin_url());
 		}else{
-			$qiwei_option= get_option('qiwei_option');
+			$qiwei_option= get_option('wp_login_enterprise_wechat_option');
 			if(!empty($qiwei_option['auto_register']) && $qiwei_option['auto_register']=="on"){
 				$userdata = array(
 					'user_login' =>  $username,

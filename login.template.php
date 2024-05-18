@@ -8,8 +8,8 @@ function qiWeiLogin(){
 			el: '#login-b',
 			params: {
 					login_type: 'CorpApp',
-					appid: '<?php echo \esc_html($qiwei_option["corpid"]); ?>',
-					agentid: '<?php echo \esc_html($qiwei_option["agentid"]); ?>',
+					appid: '<?php echo \esc_html($options["corpid"]); ?>',
+					agentid: '<?php echo \esc_html($options["agentid"]); ?>',
 					redirect_uri: '<?php echo \esc_html($url)?>',
 					state: 'loginState',
 					redirect_type: 'top',

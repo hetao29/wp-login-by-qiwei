@@ -1,15 +1,15 @@
-=== Login By Qiwei ===
+=== Login Integration For Enterprise Wechat (企微微信/企微登录wordpress）===
 
 Contributors: Hetao
-Plugin Name: Login By Qiwei
-Plugin URI: https://github.com/hetao29/wp-login-by-qiwei
+Plugin Name: Login Integration For Enterprise Wechat
+Plugin URI: https://github.com/hetao29/wp-login-integration-for-enterprise-wechat
 Tags: qiwei, weichat, weixin
 Author URI: https://github.com/hetao29/
 Author: Hetao
 Requires at least: 5.0
 Tested up to: 6.5
-Stable tag: 1.0.0
-Version: 1.0.0
+Stable tag: 1.1.0
+Version: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,15 @@ Allows user login with qiwei (the weichat of enterprise)
 1. Upload the `login-by-qiwei` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Setting the options throw "Setting" menu
+
+== 3rd party services ==
+
+1. Plugin use the openapi of weichat https://work.weixin.qq.com/
+2. Openapi and js sdk
+* gettoken https://developer.work.weixin.qq.com/document/path/91039
+* getuserinfo https://developer.work.weixin.qq.com/document/path/91023
+* wecom js sdk https://developer.work.weixin.qq.com/document/path/98152
+3. Privacy policies https://work.weixin.qq.com/nl/privacy
 
 == Screenshots ==
 
