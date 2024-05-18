@@ -1,8 +1,8 @@
-# Login By Qiwei (企微微信/企微登录wordpress）
+# Login Integration For Enterprise Wechat (企微微信/企微登录wordpress）
 
 Contributors: hetao \
-Plugin Name: Login By Qiwei \
-Plugin URI: https://github.com/hetao29/wp-login-by-qiwei \
+Plugin Name: Login Integration For Enterprise Wechat \
+Plugin URI: https://github.com/hetao29/wp-login-integration-for-enterprise-wechat \
 Tags: qiwei, weichat, weixin \
 Author URI: https://github.com/hetao29/ \
 Author: Hetao \
